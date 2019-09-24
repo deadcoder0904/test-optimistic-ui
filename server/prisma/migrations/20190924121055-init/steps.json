@@ -1,0 +1,54 @@
+{
+  "version": "0.2.55",
+  "steps": [
+    {
+      "stepType": "CreateModel",
+      "name": "Blog",
+      "embedded": false
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Blog",
+      "name": "id",
+      "type": {
+        "Base": "String"
+      },
+      "arity": "required",
+      "isUnique": false,
+      "id": {
+        "strategy": "Auto",
+        "sequence": null
+      },
+      "default": {
+        "Expression": [
+          "cuid",
+          "String",
+          []
+        ]
+      }
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Blog",
+      "name": "published",
+      "type": {
+        "Base": "Boolean"
+      },
+      "arity": "required",
+      "isUnique": false,
+      "default": {
+        "Boolean": false
+      }
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Blog",
+      "name": "title",
+      "type": {
+        "Base": "String"
+      },
+      "arity": "required",
+      "isUnique": false
+    }
+  ]
+}
