@@ -21,6 +21,7 @@ const PUBLISH_BLOG_MUTATION = gql`
   mutation publishBlog($id: ID, $published: Boolean) {
     publishBlog(id: $id, published: $published) {
       id
+      published
     }
   }
 `
